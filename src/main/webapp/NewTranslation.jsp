@@ -139,8 +139,8 @@
                     				   //alert(data);
                     				    console.log(response.data);
                     				   alert("Successfully submmited");
-                    				},catch(error=>alert("Error "+error+"Occured"););
-                    		 window.location.reload(true);
+                    				},catch(error=>alert("Error "+error+"Occured"));
+                    		        window.location.reload(true);
 
                     		}
                     		 function   FetchVariable(){
