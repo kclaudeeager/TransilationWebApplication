@@ -47,7 +47,7 @@
                             
                                 
                            
-                        <button type="button" class="btn btn-success offset-1" onClick="HandleRequest()">Translate</button>
+                        <button type="submit" class="btn btn-success offset-1" onClick="HandleRequest()">Translate</button>
                         </form>
                       </div>
                                     <script type="text/javascript">
