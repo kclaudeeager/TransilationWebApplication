@@ -11,7 +11,7 @@
         </head>
 <body onload="FetchVariable()">
  <header>
-                <nav class="navbar navbar-expand-md navbar-dark col-9" style="background-color: tomato">
+                <nav class="navbar navbar-expand-md navbar-dark col-12" style="background-color: tomato">
                     <div>
                         <a href="/" class="navbar-brand">Language translation App </a>
                     </div>
