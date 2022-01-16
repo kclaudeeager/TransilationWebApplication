@@ -11,7 +11,7 @@
         </head>
 <body onload="FetchVariable()">
  <header>
-                <nav class="navbar navbar-expand-md navbar-dark" style="background-color: tomato">
+                <nav class="navbar navbar-expand-md navbar-dark col-9" style="background-color: tomato">
                     <div>
                         <a href="/" class="navbar-brand">Language translation App </a>
                     </div>
@@ -24,7 +24,7 @@
             </header>
                      <br>
                      
-                     <div class="container col-md-12">
+                     <div class="container col-lg-12">
                      <h4>Choose the variable and the translational language</h4>
                      <br>
                        <form action="" method="get" class="ml-2">
@@ -48,8 +48,8 @@
                      <script type="text/javascript">
                      var variables=[];
                    
-                 
-              
+                 var my_Host_link="https://ishyiga-transilation.herokuapp.com/demo/v1/translate/";
+                var local_link="http://localhost:8081/demo/v1/translate/";
                      const languages = {
                    		    language1 : 'Kinyarwanda',
                    		    language2 : 'English',
@@ -71,7 +71,7 @@
                     		
                     			selected_variable=select_variables.options[select_variables.selectedIndex].value;
                     			selected_language=select_language.options[select_language.selectedIndex].value;
-                    			makeTranslationGetRequest("http://localhost:8081/demo/v1/translate/");
+                    			makeTranslationGetRequest(local_link);
                     		   
                     		
                     		
@@ -100,10 +100,10 @@
                     		}
                     		 function   FetchVariable(){
                     			  
-                           	  axios.get("http://localhost:8081/demo/v1/translate/variables").then(
+                           	  axios.get("https://ishyiga-transilation.herokuapp.com/demo/v1/translate/variables").then(
                               	        (response) => {
                               	        	var data = response.data;
-                              	        	console.log(data);
+                              	        	console.log("variables: "+data);
                               	        	variables=data; 
                               	      	for(let i=0;i<variables.length;i++) {
                                 			select_variables.options[select_variables.options.length] = new Option(data[i],data[i]);

@@ -51,6 +51,9 @@
                         </form>
                       </div>
                                     <script type="text/javascript">
+                                    
+                                    var my_Host_link="https://ishyiga-transilation.herokuapp.com/demo/v1/translate/";
+                                   var local_link="http://localhost:8081/demo/v1/translate/";
                                     var Allvariables=[];
                      const languages = {
                    		    language1 : 'Kinyarwanda',
@@ -116,7 +119,7 @@
                       		
                     		}
                     		function UpdateTranslation(variable){
-                    			var url="http://localhost:8081/demo/v1/translate/"+variable;
+                    			var url=my_Host_link;
                     			axios({
                     			    method: 'put',
                     			    url:url,
@@ -130,7 +133,7 @@
                     		}
                     		function SubmitTranslation(){
                     			//document.write(Translations);
-                    			var url="http://localhost:8081/demo/v1/translate/";
+                    			var url=my_Host_link;
                     			axios.post(url,Translations).then(response => {
                     				var data=response.data;
                     				   //alert(data);
@@ -142,7 +145,7 @@
                     		}
                     		 function   FetchVariable(){
                    			  
-                              	  axios.get("http://localhost:8081/demo/v1/translate/variables").then(
+                              	  axios.get(my_Host_link+"variables").then(
                                  	        (response) => {
                                  	        	var data = response.data;
                                  	        	console.log(data);
