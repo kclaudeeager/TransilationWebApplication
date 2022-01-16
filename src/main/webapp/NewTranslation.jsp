@@ -99,13 +99,20 @@
                     		  		console.log("Variable "+Allvariables[i]);
                         			if(Variable==Allvariables[i]){
                         			     console.log("Updating");
-                        				UpdateTranslation(Variable);
+                        			     let text = "You are about to update variable "+Variable+" \n Press OK to confirm or Cancel.";
+                        			     if (confirm(text) == true) {
+                        						UpdateTranslation(Variable);
+                        			     } else {
+                        			    	 window.location.reload(true);
+                        			    	
+                        			     }
+                        	
                         				return;
                         			}
                         			
                         		}
                     		  	SubmitTranslation();
-                    		
+                    		  	
                       		
                     		}
                     		function UpdateTranslation(variable){
@@ -117,6 +124,7 @@
                     			}).then(response => {
                  				   
                 				    console.log(response.data);
+                				    window.location.reload(true);
                 				   // alert(response.data);
                 				});
                     		}
@@ -127,6 +135,7 @@
                     				var data=response.data;
                     				   //alert(data);
                     				    console.log(response.data);
+                    				    window.location.reload(true);
                     				});
                     		
 
