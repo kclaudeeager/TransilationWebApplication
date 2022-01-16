@@ -71,7 +71,7 @@
                     		
                     			selected_variable=select_variables.options[select_variables.selectedIndex].value;
                     			selected_language=select_language.options[select_language.selectedIndex].value;
-                    			makeTranslationGetRequest(local_link);
+                    			makeTranslationGetRequest(my_Host_link);
                     		   
                     		
                     		
