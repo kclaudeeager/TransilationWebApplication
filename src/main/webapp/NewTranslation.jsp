@@ -138,9 +138,9 @@
                     				var data=response.data;
                     				   //alert(data);
                     				    console.log(response.data);
-                    				    window.location.reload(true);
-                    				});
-                    		
+                    				   alert("Successfully submmited");
+                    				},catch(error=>alert("Error "+error+"Occured"););
+                    		 window.location.reload(true);
 
                     		}
                     		 function   FetchVariable(){
