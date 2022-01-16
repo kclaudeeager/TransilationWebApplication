@@ -139,7 +139,11 @@
                     				   //alert(data);
                     				    console.log(response.data);
                     				   alert("Successfully submmited");
-                    				},catch(error=>alert("Error "+error+"Occured"));
+                    				},
+                                     (error)=>{
+                                    alert("Error "+error+" Occured");
+                                }
+                                        );
                     		        window.location.reload(true);
 
                     		}
