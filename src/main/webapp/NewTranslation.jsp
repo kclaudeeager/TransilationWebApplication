@@ -127,6 +127,8 @@
                     			}).then(response => {
                  				   
                 				    console.log(response.data);
+
+alert("Successfully Updated with"+response.data);
                 				    window.location.reload(true);
                 				   // alert(response.data);
                 				});
