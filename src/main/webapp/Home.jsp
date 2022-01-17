@@ -11,7 +11,7 @@
         </head>
 <body onload="FetchVariable()">
  <header>
-                <nav class="navbar navbar-expand-md navbar-dark col-12" style="background-color: tomato">
+                <nav class="navbar navbar-expand-md navbar-dark col-md-12" style="background-color: tomato">
                     <div>
                         <a href="/" class="navbar-brand">Language translation App </a>
                     </div>
@@ -24,7 +24,7 @@
             </header>
                      <br>
                      
-                     <div class="container col-lg-12">
+                     <div class="container col-lg-9 col-md-9 col-sm-12">
                      <h4>Choose the variable and the translational language</h4>
                      <br>
                        <form action="" method="get" class="ml-2">
