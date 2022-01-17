@@ -120,6 +120,7 @@
                     		}
                     		function UpdateTranslation(variable){
                     			var url=my_Host_link;
+                                  alert(url);
                     			axios({
                     			    method: 'put',
                     			    url:url,
@@ -128,7 +129,7 @@
                  				   
                 				    console.log(response.data);
 
-alert("Successfully Updated with"+response.data);
+                                                    alert("Successfully Updated with"+response.data);
                 				    window.location.reload(true);
                 				   // alert(response.data);
                 				});
