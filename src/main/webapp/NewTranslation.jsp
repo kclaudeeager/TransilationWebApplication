@@ -72,11 +72,11 @@
                     		let translation="";
                     	
                     		var Translations={
-                    				variable:"",
-                    				kinyarwanda:"",
-                    				english:"",
-                    				french:"",
-                    				swahili:""
+                    				variable:null,
+                    				kinyarwanda:null,
+                    				english:null,
+                    				french:null,
+                    				swahili:null
                     		};
                     		function UpdateObject(){
                     			Variable=document.getElementById("new_variable").value;
