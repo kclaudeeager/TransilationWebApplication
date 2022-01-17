@@ -120,12 +120,8 @@
                     		}
                     		function UpdateTranslation(variable){
                     			var url=my_Host_link;
-                                  alert(url);
-                    			axios({
-                    			    method: 'put',
-                    			    url:url,
-                    			    data:Translations
-                    			}).then(response => {
+                                  //alert(url);
+                                            axios.put(url,Translations).then(response => {
                  				   
                 				    console.log(response.data);
 
