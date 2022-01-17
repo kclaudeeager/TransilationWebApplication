@@ -120,13 +120,14 @@
                     		}
                     		function UpdateTranslation(variable){
                     			var url=my_Host_link+variable;
-                                  alert(url);
+                                  //alert(url);
                                             axios.put(url,Translations).then(response => {
                  				   
                 				    console.log(response.data);
 
-                                                    alert("Successfully Updated with"+response.data);
-                				    window.location.reload(true);
+                                                    alert("Successfully Updated");
+                                                     docoment.write(response);
+                				    //window.location.reload(true);
                 				   // alert(response.data);
                 				});
                     		}
