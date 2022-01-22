@@ -41,7 +41,7 @@
                                 </select>  
                             </fieldset>
                                   <fieldset class="form-group">
-                              <label>Enter translation in selected language:</label>
+                              <label>Enter translation in selected language and switch the language to set new translation:</label>
                                </fieldset>
                                  <fieldset class="form-group"><input name="new_translation" id="new_translation" class="offset-1" onblur="UpdateObject()" required/>  </fieldset>
                             
