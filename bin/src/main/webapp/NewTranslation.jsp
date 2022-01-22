@@ -27,40 +27,16 @@
                       <div class="container col-md-12">
                        <h4>Create your translation on this page</h4>
                      <br>
-             
-                       <form action="" method="post" class="col-md-7 col-sm-12 col-lg-8 justify-content-center align-items-center">
-                        <fieldset class="form-group ">
+                       <form action="" method="post" class="ml-2">
+                        <fieldset class="form-group">
                               <label>Enter variable: </label>
-                                <input class="form-control-sm input-sm row" name="new_variable" id="new_variable" required/>
+                                <input name="new_variable" id="new_variable" required/>
                                 
                             </fieldset>
-                              <fieldset class="form-group">
-                              <label>In English: </label>
-                                <input class="form-control-sm input-sm row" name="english" id="english" required/>
-                                
-                            </fieldset>
-                              <div class="form-group">
-                              <label for="french"">En Francais: </label>
-                                <input class="form-control-sm input-sm row" name="french" id="french" required/>
-                                
-                            </div>
-                              <fieldset class="form-group">
-                              <label>Mu Kinyarwanda: </label>
-                                <input class="form-control-sm input-sm row" name="kinyarwanda" id="kinyarwanda" required/>
-                                
-                            </fieldset>
-                              <fieldset class="form-group">
-                              <label>katika Kiswahili: </label>
-                                <input class="form-control-sm input-sm row" name="kiswahili" id="kiswahili" required/>
-                                
-                            </fieldset>
-                             <button type="submit" class="btn btn-success offset-1" onClick="HandleRequest()">Submit</button>
-                   </form>
-                  
-                    <!--    </form>
+                            
                              <fieldset class="form-group">
                                 <label>Select language: </label>
-                                <select  class="ml-2" name="language" id="languages" onchange="EmptyValue()" required>
+                                <select name="language" id="languages" onchange="EmptyValue()" required>
                                 <option name="default"> </option>
                                 </select>  
                             </fieldset>
@@ -72,8 +48,7 @@
                                 
                            
                         <button type="submit" class="btn btn-success offset-1" onClick="HandleRequest()">Translate</button>
-                        </form>-->
-                        
+                        </form>
                       </div>
                                     <script type="text/javascript">
                                     
@@ -87,13 +62,12 @@
                    		    language4 : 'Swahili'
                    		};
    
-                   /* 		var select_language = document.getElementById("languages");
+                    		var select_language = document.getElementById("languages");
                     		var selected_language="";
                     		for(index in languages) {
                     			select_language.options[select_language.options.length] = new Option(languages[index], languages[index]);
                     		
                     		}
-                    		*/
                     		let Variable="";
                     		let translation="";
                     	
@@ -104,7 +78,7 @@
                     				french:null,
                     				swahili:null
                     		};
-                  /*  		function UpdateObject(){
+                    		function UpdateObject(){
                     			Variable=document.getElementById("new_variable").value;
                     			selected_language=select_language.options[select_language.selectedIndex].value;
                     			selected_language=selected_language.toLowerCase();
@@ -115,20 +89,13 @@
                     			console.log(Translations);
                     		
                     		}
-                    		*/
-                    		/*function EmptyValue(){
+                    		function EmptyValue(){
                     			
                     			console.log("My value: "+document.getElementById("new_translation").value);
                     			document.getElementById("new_translation").value="";
                     		}
-                    		*/
                     		function HandleRequest(){
-                    			Variable=document.getElementById("new_variable").value;
-                    			Translations.variable=Variable;
-                    			Translations.kinyarwanda=document.getElementById("kinyarwanda").value;
-                    			Translations.english=document.getElementById("english").value;
-                    			Translations.french=document.getElementById("french").value;
-                    			Translations.swahili=document.getElementById("kiswahili").value;
+                    			
                     		console.log("Variables now "+Allvariables);
                     	
                     		  	for(let i=0;i<Allvariables.length;i++) {
@@ -158,12 +125,11 @@
                  				   
                 				    console.log(response.data);
 
-                                                  
+                                                    alert("Successfully Updated");
                                                      docoment.write(response);
                 				    //window.location.reload(true);
                 				   // alert(response.data);
                 				});
-                				  alert("Successfully Updated");
                     		}
                     		function SubmitTranslation(){
                     			//document.write(Translations);
@@ -172,13 +138,12 @@
                     				var data=response.data;
                     				   //alert(data);
                     				    console.log(response.data);
-                    				  
+                    				   alert("Successfully submmited");
                     				},
                                      (error)=>{
                                     alert("Error "+error+" Occured");
                                 }
                                         );
-                                         alert("Successfully submmited");
                     		        window.location.reload(true);
 
                     		}
